@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #251f1f;
+  background-color: #0f172a;
   font-family: 'Segoe UI', sans-serif;
   display: flex;
   align-items: flex-end;
@@ -17,8 +17,8 @@ body {
 /* ===== BARRA DEL REPRODUCTOR ===== */
 .player-bar {
   width: 100%;
-  background-color: rgba(0  , 0, 0, 0.6);
-  border-top: 1px solid #282828;
+  background-color: rgba(#0f172a  , 0, 0, 0.6);
+  border-top: 1px solid gray;
   padding: 0 24px;
   height: 72px;
   display: flex;
