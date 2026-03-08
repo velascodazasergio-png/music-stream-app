@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Music Player</title>
+<link rel="stylesheet" href="css/views/player.css">
+<link rel="stylesheet" href="views/ player.css" />
+<link rel="stylesheet" href="css/views/player.css" />
+<!-- Imagenes -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+<div class="player-bar">
+    
+
+    <!-- Sección izquierda: info de la canción -->
+    <div class="song-info">
+    <div class="album-art">
+        
+        <i class="fa-solid fa-music"></i>
+        <div>
+            <img  class="portals"  src="assets/img/Sweetener.jpg" alt="portals">
+        </div>
+    </div>
+    <div class="song-text">
+        <span class="song-title">God is a woman</span>
+        <span class="song-artist">Ariana Grande</span>
+    </div>
+    </div>
+
+    <!-- Sección central: controles + barra de progreso -->
+    <div class="controls-center">
+    <div class="control-buttons">
+        <button class="ctrl-btn" title="Aleatorio"><i class="fa-solid fa-shuffle"></i></button>
+        <button class="ctrl-btn" title="Anterior"><i class="fa-solid fa-backward-step"></i></button>
+        <button class="ctrl-btn play-btn" title="Pausar"><i class="fa-solid fa-pause"></i></button>
+        <button class="ctrl-btn" title="Siguiente"><i class="fa-solid fa-forward-step"></i></button>
+        <button class="ctrl-btn" title="Repetir"><i class="fa-solid fa-repeat"></i></button>
+    </div>
+    <div class="progress-row">
+        <span class="time current">1:23</span>
+        <div class="progress-bar">
+        <div class="progress-fill" style="width: 37%;"></div>
+        <div class="progress-thumb" style="left: 37%;"></div>
+        </div>
+        <span class="time total">3:28</span>
+    </div>
+    </div>
+
+    <!-- Sección derecha: volumen -->
+    <div class="volume-section">
+    <button class="ctrl-btn volume-icon" title="Volumen"><i class="fa-solid fa-volume-low"></i></button>
+    <div class="volume-bar">
+        <div class="volume-fill" style="width: 65%;"></div>
+        <div class="volume-thumb" style="left: 65%;"></div>
+    </div>
+    </div>
+
+</div>
+
+<script>
+    // Interactividad básica: barra de progreso clickeable
+    const progressBar = document.querySelector('.progress-bar');
+    const progressFill = document.querySelector('.progress-fill');
+    const progressThumb = document.querySelector('.progress-thumb');
+    const currentTime = document.querySelector('.time.current');
+
+    progressBar.addEventListener('click', (e) => {
+    const rect = progressBar.getBoundingClientRect();
+      const pct = ((e.clientX - rect.left) / rect.width) * 100;
+    progressFill.style.width = pct + '%';
+    progressThumb.style.left = pct + '%';
+    const totalSecs = 225;
+    const cur = Math.round((pct / 100) * totalSecs);
+    const m = Math.floor(cur / 60);
+    const s = cur % 60;
+    currentTime.textContent = `${m}:${s.toString().padStart(2,'0')}`;
+    });
+
+    // Volumen clickeable
+    const volumeBar = document.querySelector('.volume-bar');
+    const volumeFill = document.querySelector('.volume-fill');
+    const volumeThumb = document.querySelector('.volume-thumb');
+
+    volumeBar.addEventListener('click', (e) => {
+    const rect = volumeBar.getBoundingClientRect();
+      const pct = Math.min(100, Math.max(0, ((e.clientX - rect.left) / rect.width) * 100));
+    volumeFill.style.width = pct + '%';
+    volumeThumb.style.left = pct + '%';
+    });
+
+    //Boton de play
+    const playBtn = document.querySelector('.play-btn i');
+    document.querySelector('.play-btn').addEventListener('click', () => {
+    if (playBtn.classList.contains('fa-pause')) {
+        playBtn.classList.replace('fa-pause', 'fa-play');
+    } 
+    else {
+            playBtn.classList.replace('fa-play', 'fa-pause');
+        }
+    });
+    </script>
+
+</body>
+</html>
