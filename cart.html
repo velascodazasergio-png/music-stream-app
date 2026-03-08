@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MusicStream - Your Cart</title>
+  <link rel="stylesheet" href="css/cart.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <div class="logo">
+        <img src="assets/img/icons/gif/rocola.gif" alt="logo" class="logo-icon-gif" />
+        <span class="logo-text">MusicStream</span>
+      </div>
+    </div>
+    <div class="nav-center">
+      <a href="#" class="nav-link">Home</a>
+      <a href="#" class="nav-link">Discover</a>
+      <a href="#" class="nav-link">Library</a>
+      <a href="#" class="nav-link active">Store</a>
+    </div>
+    <div class="nav-right">
+      <button class="icon-btn cart-active">
+        <i class="fa-solid fa-cart-shopping"></i>
+      </button>
+      <div class="avatar">
+        <img src="assets/img/logo-foto1.png" alt="perfil" />
+      </div>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <a href="#">Store</a>
+    <span>/</span>
+    <span class="active">Your Cart</span>
+  </div>
+
+  <!-- CONTENIDO -->
+  <main class="cart-content">
+
+    <!-- COLUMNA IZQUIERDA: items -->
+    <section class="cart-items">
+      <h1 class="cart-title">Your Cart</h1>
+
+      <!-- Item 1 -->
+      <div class="cart-item">
+        <div class="item-cover">
+          <img src="assets/img/portals-MM.jpg" alt="Portals" />
+        </div>
+        <div class="item-info">
+          <span class="item-name">Portals</span>
+          <span class="item-artist">Melanie Martinez</span>
+          <span class="item-format">Digital MP3</span>
+        </div>
+        <div class="item-controls">
+          <button class="qty-btn" onclick="changeQty(this, -1)">-</button>
+          <span class="qty">1</span>
+          <button class="qty-btn" onclick="changeQty(this, 1)">+</button>
+        </div>
+        <span class="item-price">$9.99</span>
+        <button class="delete-btn" onclick="removeItem(this)">
+          <i class="fa-solid fa-trash"></i>
+        </button>
+      </div>
+
+      <!-- Item 2 (ejemplo extra) -->
+      <div class="cart-item">
+        <div class="item-cover">
+        <img src="assets/img/evanescence- ultimo.jpg" alt="Evanescence Fallen" />
+        </div>
+        <div class="item-info">
+          <span class="item-name">Evanescence Fallen</span>
+          <span class="item-artist">evanescence</span>
+          <span class="item-format">Digital MP3</span>
+        </div>
+        <div class="item-controls">
+          <button class="qty-btn" onclick="changeQty(this, -1)">-</button>
+          <span class="qty">1</span>
+          <button class="qty-btn" onclick="changeQty(this, 1)">+</button>
+        </div>
+        <span class="item-price">$7.99</span>
+        <button class="delete-btn" onclick="removeItem(this)">
+          <i class="fa-solid fa-trash"></i>
+        </button>
+      </div>
+    </section>
+
+    <!-- COLUMNA DERECHA: resumen -->
+    <aside class="order-summary">
+      <h2 class="summary-title">Order Summary</h2>
+      <div class="summary-row">
+        <span>Subtotal</span>
+        <span id="subtotal">$17,98</span>
+      </div>
+      <div class="summary-row">
+        <span>Estimated Tax</span>
+        <span id="tax">$1.84</span>
+      </div>
+      <div class="summary-divider"></div>
+      <div class="summary-row total-row">
+        <span>Total</span>
+        <span id="total">$19,82</span>
+      </div>
+      <button class="btn-checkout">
+        <i class="fa-solid fa-lock"></i>
+        <a href="">Proceed to Checkout</a>
+      </button>
+      <a href="#" class="continue-shopping">Continue Shopping</a>
+    </aside>
+
+  </main>
+
+  <script>
+    function changeQty(btn, delta) {
+      const qtyEl = btn.parentElement.querySelector('.qty');
+      let qty = parseInt(qtyEl.textContent) + delta;
+      if (qty < 1) qty = 1;
+      qtyEl.textContent = qty;
+    }
+
+    function removeItem(btn) {
+      btn.closest('.cart-item').remove();
+    }
+  </script>
+
+</body>
+</html>

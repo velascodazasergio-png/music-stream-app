@@ -1,38 +1,40 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>MusicStream - Portals</title>
-  <link rel="stylesheet" href="css/evanescence.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>MusicStream - Portals</title>
+<link rel="stylesheet" href="css/evanescence.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 <iframe src="player-evanescence.html" class="player-iframe" scrolling="no" frameborder="0"></iframe>
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar">
+<!-- NAVBAR -->
+<nav class="navbar">
     <div class="nav-left">
     <div class="logo">
     <img src="assets/img/icons/gif/rocola.gif" alt="logo" class="logo-icon-gif" />
         <span class="logo-text">MusicStream</span>
-      </div>
-      <div class="search-bar">
+    </div>
+    <div class="search-bar">
         <i class="fa-solid fa-magnifying-glass"></i>
         <input type="text" placeholder="Search artists, albums..." />
-      </div>
+    </div>
     </div>
     <div class="nav-right">
     <a href="store.html" class="nav-link">Home</a>
     <a href="#" class="nav-link">Browse</a>
     <a href="#" class="nav-link">Library</a>
-    <button class="icon-btn"><i class="fa-solid fa-cart-shopping"></i></button>
+    <button class="icon-btn" onclick="window.location.href='cart.html'">
+    <i class="fa-solid fa-cart-shopping"></i>
+    </button>
     <button class="icon-btn"><i class="fa-solid fa-bell"></i></button>
     <div class="avatar">
         <img src="assets/img/logo-foto1.png" alt="perfil" />
     </div>
     </div>
-  </nav>
+</nav>
 
   <!-- BREADCRUMB -->
   <div class="breadcrumb">
@@ -43,8 +45,8 @@
     <span class="active">evanescence</span>
   </div>
 
-  <!-- CONTENIDO PRINCIPAL -->
-  <main class="main-content">
+<!-- CONTENIDO PRINCIPAL -->
+<main class="main-content">
 
     <!-- COLUMNA IZQUIERDA -->
     <aside class="album-sidebar">
