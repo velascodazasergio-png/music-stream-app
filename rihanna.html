@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MusicStream</title>
+  <link rel="stylesheet" href="css/rihanna.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<iframe src="player rihanna.html" class="player-iframe" scrolling="no" frameborder="0"></iframe>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-left">
+    <div class="logo">
+    <img src="assets/img/icons/gif/rocola.gif" alt="logo" class="logo-icon-gif" />
+        <span class="logo-text">MusicStream</span>
+      </div>
+      <div class="search-bar">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search artists, albums..." />
+      </div>
+    </div>
+    <div class="nav-right">
+    <a href="store.html" class="nav-link">Home</a>
+    <a href="#" class="nav-link">Browse</a>
+    <a href="#" class="nav-link">Library</a>
+    <button class="icon-btn"><i class="fa-solid fa-cart-shopping"></i></button>
+    <button class="icon-btn"><i class="fa-solid fa-bell"></i></button>
+    <div class="avatar">
+        <img src="assets/img/logo-foto1.png" alt="perfil" />
+    </div>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <a href="index.html">Home</a>
+    <span>/</span>
+    <a href="#">Artist</a>
+    <span>/</span>
+    <span class="active">good girl gone bad</span>
+  </div>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="main-content">
+
+    <!-- COLUMNA IZQUIERDA -->
+    <aside class="album-sidebar">
+        <div class="card">
+            <div class="wrapper">
+                <img src="assets/img/rihanna good girl gone bad_ reloaded.jpg" class="cover-image" />
+            </div>
+            <img src="assets/img/logo rihanna.png" class="title" />
+            <img src="assets/img/character rihanna.png" class="character" />
+        </div>
+        <h1 class="album-title">good girl gone bad</h1>
+        <p class="album-meta">Rihanna • 2007 • pop</p>
+        <button class="btn-cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+            Add Album to Cart - $5.29
+        </button>
+        <div class="btn-row">
+            <button class="btn-secondary">
+                <i class="fa-regular fa-heart"></i> Wishlist
+            </button>
+            <button class="btn-secondary">
+                <i class="fa-solid fa-share-nodes"></i> Share
+            </button>
+        </div>
+    </aside>
+
+    <!-- COLUMNA DERECHA ← esto te faltaba dentro del main -->
+    <section class="album-detail">
+        <h2 class="section-title">List</h2>
+        <table class="tracklist">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Title</th>
+                    <th>Artist</th>
+                    <th><i class="fa-regular fa-clock"></i></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="track-row">
+                    <td class="track-num">1</td>
+                    <td class="track-title">Don't Stop the Music</td>
+                    <td class="track-artist">Rihanna</td>
+                    <td class="track-duration">4:27</td>
+                </tr>
+                <tr class="track-row">
+                    <td class="track-num">2</td>
+                    <td class="track-title">Umbrella</td>
+                    <td class="track-artist">Rihanna</td>
+                    <td class="track-duration">4:35</td>
+                </tr>
+                <tr class="track-row">
+                    <td class="track-num">3</td>
+                    <td class="track-title">Breakin'Dishes</td>
+                    <td class="track-artist">Rihanna</td>
+                    <td class="track-duration">3:20</td>
+                </tr>
+                <tr class="track-row">
+                    <td class="track-num">4</td>
+                    <td class="track-title">Say It</td>
+                    <td class="track-artist">Rihanna</td>
+                    <td class="track-duration">4:10</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="tabs">
+            <button class="tab active">About the Artist</button>
+            <button class="tab">Reviews</button>
+            <button class="tab">Credits</button>
+        </div>
+        <div class="tab-content">
+            <p>It is about the transformation of her image and sound towards a more confident, rebellious, and independent stage. In her songs, she talks about relationships, desire, self-confidence, and personal freedom, showing a more mature and daring version of the artist. This album marked an important change in her career with a more modern and danceable style.</p>
+        </div>
+    </section>
+
+</main>  <!-- ← el main cierra AQUÍ, después de ambas columnas -->
+
+<script>
+    // Tabs
+    const tabs = document.querySelectorAll('.tab');
+    tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+    });
+    });
+
+    // Hover en filas de tracklist
+    const rows = document.querySelectorAll('.track-row');
+    rows.forEach(row => {
+    row.addEventListener('mouseenter', () => {
+        row.querySelector('.track-num').style.display = 'none';
+    });
+    row.addEventListener('mouseleave', () => {
+        row.querySelector('.track-num').style.display = '';
+    });
+    });
+</script>
+
+
+</body>
+</html>
