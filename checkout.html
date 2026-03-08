@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MusicStream - Secure Checkout</title>
+  <link rel="stylesheet" href="css/views/checkout.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <div class="logo">
+        <img src="assets/img/icons/gif/rocola.gif" alt="logo" class="logo-icon-gif" />
+        <span class="logo-text">MusicStream</span>
+      </div>
+    </div>
+    <div class="nav-right">
+      <a href="store.html" class="back-link">Back to Store</a>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <a href="cart.html">Cart</a>
+    <span>/</span>
+    <span class="active">Payment</span>
+    <span>/</span>
+    <span class="inactive">Complete</span>
+  </div>
+
+  <!-- CONTENIDO -->
+  <main class="checkout-content">
+
+    <!-- COLUMNA IZQUIERDA: formulario -->
+    <section class="checkout-form">
+      <h1 class="checkout-title">Secure Checkout</h1>
+
+      <!-- Payment Method -->
+      <div class="form-section">
+        <h2 class="form-section-title">Payment Method</h2>
+        <div class="card-box">
+          <div class="card-header">
+            <span class="card-label">Pay with Credit Card</span>
+            <div class="card-icons">
+              <div class="card-icon visa"></div>
+              <div class="card-icon mc"></div>
+              <div class="card-icon amex"></div>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label>Card Number</label>
+            <div class="input-wrapper">
+              <input type="text" placeholder="0000 0000 0000 0000" maxlength="19" />
+              <i class="fa-regular fa-credit-card input-icon"></i>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field-group">
+              <label>Expiration (MM/YY)</label>
+              <input type="text" placeholder="MM/YY" maxlength="5" />
+            </div>
+            <div class="field-group">
+              <label>CVC</label>
+              <div class="input-wrapper">
+                <input type="text" placeholder="123" maxlength="4" />
+                <i class="fa-solid fa-lock input-icon"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label>Name on Card</label>
+            <input type="text" placeholder="John Doe" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Billing Address -->
+      <div class="form-section">
+        <h2 class="form-section-title">Billing Address</h2>
+        <div class="card-box">
+
+          <div class="field-group">
+            <label>Country/Region</label>
+            <div class="input-wrapper select-wrapper">
+              <select>
+                <option>United States</option>
+                <option>Colombia</option>
+                <option>Mexico</option>
+                <option>Spain</option>
+                <option>Argentina</option>
+              </select>
+              <i class="fa-solid fa-chevron-down input-icon"></i>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label>Street Address</label>
+            <input type="text" placeholder="123 Music Lane" />
+          </div>
+
+          <div class="field-row">
+            <div class="field-group">
+              <label>City</label>
+              <input type="text" placeholder="Nashville" />
+            </div>
+            <div class="field-group">
+              <label>State/Province</label>
+              <input type="text" placeholder="Tennessee" />
+            </div>
+          </div>
+
+          <div class="field-group half">
+            <label>Postal Code</label>
+            <input type="text" placeholder="37203" />
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- COLUMNA DERECHA: resumen -->
+    <aside class="order-summary">
+      <h2 class="summary-title">Order Summary</h2>
+
+      <div class="summary-item">
+        <div class="summary-cover">
+          <img src="assets/img/portals-MM.jpg" alt="Portals" />
+        </div>
+        <div class="summary-info">
+          <span class="summary-name">Portals</span>
+          <span class="summary-artist">Melanie Martinez</span>
+        </div>
+        <span class="summary-price">$9.99</span>
+      </div>
+
+      <div class="summary-item">
+        <div class="summary-cover placeholder-cover">
+         <img src="assets/img/evanescence- ultimo.jpg" alt="">
+        </div>
+        <div class="summary-info">
+          <span class="summary-name">Evanescence Fallen</span>
+          <span class="summary-artist">evanescence</span>
+        </div>
+        <span class="summary-price">$7.99</span>
+      </div>
+
+      <div class="summary-divider"></div>
+
+      <div class="summary-row">
+        <span>Subtotal</span>
+        <span>$17,98</span>
+      </div>
+      <div class="summary-row">
+        <span>Taxes</span>
+        <span>$1.84</span>
+      </div>
+
+      <div class="summary-divider"></div>
+
+      <div class="summary-row total-row">
+        <span>Total</span>
+        <span>$19,82</span>
+      </div>
+
+      <button class="btn-place-order">
+        <i class="fa-solid fa-lock"></i>
+        Place Order & Pay $19,82
+      </button>
+
+      <p class="terms-text">
+        By placing this order, you agree to our
+        <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
+      </p>
+    </aside>
+
+  </main>
+
+</body>
+</html>
