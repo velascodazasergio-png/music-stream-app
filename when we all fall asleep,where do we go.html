@@ -60,7 +60,7 @@
         <p class="album-meta">Billie Eilish • 2019 • pop</p>
         <button class="btn-cart">
             <i class="fa-solid fa-cart-shopping"></i>
-            Add Album to Cart - $6.29
+            <a href="cart.html">Add Album to Cart - $6.29</a>
         </button>
         <div class="btn-row">
             <button class="btn-secondary">
@@ -122,29 +122,5 @@
     </section>
 
 </main>  <!-- ← el main cierra AQUÍ, después de ambas columnas -->
-
-<script>
-    // Tabs
-    const tabs = document.querySelectorAll('.tab');
-    tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-        tabs.forEach(t => t.classList.remove('active'));
-        tab.classList.add('active');
-    });
-    });
-
-    // Hover en filas de tracklist
-    const rows = document.querySelectorAll('.track-row');
-    rows.forEach(row => {
-    row.addEventListener('mouseenter', () => {
-        row.querySelector('.track-num').style.display = 'none';
-    });
-    row.addEventListener('mouseleave', () => {
-        row.querySelector('.track-num').style.display = '';
-    });
-    });
-</script>
-
-
 </body>
 </html>
