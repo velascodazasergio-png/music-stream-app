@@ -3,105 +3,140 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Music Player</title>
-<link rel="stylesheet" href="css/views/player.css">
-<link rel="stylesheet" href="views/ player.css" />
+<title>MusicStream - After School</title>
 <link rel="stylesheet" href="css/views/player.css" />
-<!-- Imagenes -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<link rel="shortcut icon" href="/assets/img/icons/logo_kirby.ico" type="image/x-icon">
 </head>
 <body>
 
-<div class="player-bar">
-    
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="nav-left">
+    <div class="logo">
+        <img src="assets/img/icons/gif/rocola.gif" alt="logo" class="logo-icon-gif" />
+        <span class="logo-text">MusicStream</span>
+    </div>
+    <div class="search-bar">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search" />
+    </div>
+    </div>
+    <div class="nav-center">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="#" class="nav-link">Browse</a>
+    <a href="#" class="nav-link">Library</a>
+    <a href="store.html" class="nav-link">Store</a>
+    </div>
+    <div class="nav-right">
+    <button class="icon-btn"><i class="fa-solid fa-bell"></i></button>
+    <div class="avatar">
+    <img src="assets/img/logo-foto1.png" alt="perfil" />
+    </div>
+</div>
+</nav>
 
-    <!-- Sección izquierda: info de la canción -->
-    <div class="song-info">
-    <div class="album-art">
-        
-        <i class="fa-solid fa-music"></i>
-        <div>
-            <img  class="portals"  src="assets/img/after scchool-MM.jpg" alt="portals">
+<!-- CONTENIDO PRINCIPAL -->
+<main class="main-content">
+<!-- COLUMNA IZQUIERDA: portada + info -->
+<section class="now-playing">
+    <div class="vinyl-container">
+    <!-- Disco giratorio atrás -->
+        <div class="disc">
+        <img src="assets/img/DISC_k-12_MM.jpg" alt="disco" class="disc-img" />
+        <div class="disc-hole"></div>
         </div>
+    <!-- Portada polaroid adelante -->
+    <div class="vinyl-card">
+        <img src="assets/img/after scchool-MM.jpg" alt="K-12" class="album-img" />
+        <div class="vinyl-label">After School · MELANIE MARTINEZ</div>
     </div>
-    <div class="song-text">
-        <span class="song-title">Notebook</span>
-        <span class="song-artist">Melanie Martinez</span>
     </div>
+    <div class="song-details">
+    <div class="song-title-row">
+        <button class="like-btn"><i class="fa-regular fa-heart"></i></button>
     </div>
+    <p class="song-artist">Melanie Martinez</p>
+    <p class="song-album">after School</p>
+    </div>
+</section>
 
-    <!-- Sección central: controles + barra de progreso -->
-    <div class="controls-center">
+    <!-- COLUMNA DERECHA: Up Next -->
+    <aside class="up-next">
+    <h2 class="up-next-title">Up Next</h2>
+    <ul class="queue-list">
+    <li class="queue-item">
+        <div class="queue-cover">
+        <img src="assets/img/after scchool-MM.jpg" alt="foto del album de la cancion" />
+        </div>
+        <div class="queue-info">
+        <span class="queue-name">Test Me</span>
+        <span class="queue-artist">Melanie Martinez</span>
+        </div>
+        <span class="queue-duration">2:54</span>
+    </li>
+    <li class="queue-item">
+        <div class="queue-cover">
+        <img src="assets/img/after scchool-MM.jpg" alt="Milk of the Siren" />
+        </div>
+        <div class="queue-info">
+        <span class="queue-name">Glued</span>
+        <span class="queue-artist">Melanie Martinez</span>
+        </div>
+        <span class="queue-duration">3:12</span>
+    </li>
+    <li class="queue-item">
+        <div class="queue-cover">
+        <img src="assets/img/after scchool-MM.jpg" alt="Tunnel Vision" />
+        </div>
+        <div class="queue-info">
+        <span class="queue-name">Notebook</span>
+        <span class="queue-artist">Melanie Martinez</span>
+        </div>
+        <span class="queue-duration">2:30</span>
+    </li>
+    </ul>
+    </aside>
+
+</main>
+
+<!-- PLAYER BAR (fija abajo) -->
+<div class="player-bar">
+
+    <div class="song-info">
+        <div class="album-art">
+            <img class="portals" src="assets/img/after scchool-MM.jpg" alt="portals" />
+        </div>
+    <div class="song-text">
+        <span class="song-title-player">Brain & Heart</span>
+        <span class="song-artist-player">Melanie Martinez</span>
+    </div>
+</div>
+
+<div class="controls-center">
     <div class="control-buttons">
         <button class="ctrl-btn" title="Aleatorio"><i class="fa-solid fa-shuffle"></i></button>
         <button class="ctrl-btn" title="Anterior"><i class="fa-solid fa-backward-step"></i></button>
-        <button class="ctrl-btn play-btn" title="Pausar"><i class="fa-solid fa-pause"></i></button>
+        <button class="ctrl-btn play-btn" title="Reproducir"><i class="fa-solid fa-play"></i></button>
         <button class="ctrl-btn" title="Siguiente"><i class="fa-solid fa-forward-step"></i></button>
         <button class="ctrl-btn" title="Repetir"><i class="fa-solid fa-repeat"></i></button>
     </div>
     <div class="progress-row">
-        <span class="time current">1:23</span>
-        <div class="progress-bar">
-        <div class="progress-fill" style="width: 37%;"></div>
-        <div class="progress-thumb" style="left: 37%;"></div>
-        </div>
-        <span class="time total">2:30</span>
+    <span class="time current">0:00</span>
+    <div class="progress-bar">
+        <div class="progress-fill" style="width: 0%;"></div>
+        <div class="progress-thumb" style="left: 0%;"></div>
+    </div>
+    <span class="time total">3:23</span>
     </div>
     </div>
 
-    <!-- Sección derecha: volumen -->
-    <div class="volume-section">
+<div class="volume-section">
     <button class="ctrl-btn volume-icon" title="Volumen"><i class="fa-solid fa-volume-low"></i></button>
-    <div class="volume-bar">
+        <div class="volume-bar">
         <div class="volume-fill" style="width: 65%;"></div>
         <div class="volume-thumb" style="left: 65%;"></div>
+        </div>
     </div>
-    </div>
-
-</div>
-
-<script>
-    // Interactividad básica: barra de progreso clickeable
-    const progressBar = document.querySelector('.progress-bar');
-    const progressFill = document.querySelector('.progress-fill');
-    const progressThumb = document.querySelector('.progress-thumb');
-    const currentTime = document.querySelector('.time.current');
-
-    progressBar.addEventListener('click', (e) => {
-    const rect = progressBar.getBoundingClientRect();
-      const pct = ((e.clientX - rect.left) / rect.width) * 100;
-    progressFill.style.width = pct + '%';
-    progressThumb.style.left = pct + '%';
-    const totalSecs = 225;
-    const cur = Math.round((pct / 100) * totalSecs);
-    const m = Math.floor(cur / 60);
-    const s = cur % 60;
-    currentTime.textContent = `${m}:${s.toString().padStart(2,'0')}`;
-    });
-
-    // Volumen clickeable
-    const volumeBar = document.querySelector('.volume-bar');
-    const volumeFill = document.querySelector('.volume-fill');
-    const volumeThumb = document.querySelector('.volume-thumb');
-
-    volumeBar.addEventListener('click', (e) => {
-    const rect = volumeBar.getBoundingClientRect();
-      const pct = Math.min(100, Math.max(0, ((e.clientX - rect.left) / rect.width) * 100));
-    volumeFill.style.width = pct + '%';
-    volumeThumb.style.left = pct + '%';
-    });
-
-    //Boton de play
-    const playBtn = document.querySelector('.play-btn i');
-    document.querySelector('.play-btn').addEventListener('click', () => {
-    if (playBtn.classList.contains('fa-pause')) {
-        playBtn.classList.replace('fa-pause', 'fa-play');
-    } 
-    else {
-            playBtn.classList.replace('fa-play', 'fa-pause');
-        }
-    });
-    </script>
-
 </body>
 </html>
