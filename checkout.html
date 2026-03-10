@@ -32,12 +32,13 @@
     <span class="inactive">Complete</span>
   </div>
 
-  <!-- CONTENIDO -->
-  <main class="checkout-content">
+<main class="checkout-content">
 
-    <!-- COLUMNA IZQUIERDA: formulario -->
-    <section class="checkout-form">
-      <h1 class="checkout-title">Secure Checkout</h1>
+  <!-- COLUMNA IZQUIERDA: formulario -->
+  <section class="checkout-form">
+    <h1 class="checkout-title">Secure Checkout</h1>
+
+    <form action="success.html" method="get">
 
       <!-- Payment Method -->
       <div class="form-section">
@@ -55,7 +56,7 @@
           <div class="field-group">
             <label>Card Number</label>
             <div class="input-wrapper">
-              <input type="text" placeholder="0000 0000 0000 0000" maxlength="19" />
+              <input type="text" placeholder="0000 0000 0000 0000" maxlength="19" pattern="[0-9 ]{19}" inputmode="numeric" required />
               <i class="fa-regular fa-credit-card input-icon"></i>
             </div>
           </div>
@@ -63,12 +64,12 @@
           <div class="field-row">
             <div class="field-group">
               <label>Expiration (MM/YY)</label>
-              <input type="text" placeholder="MM/YY" maxlength="5" />
+              <input type="text" placeholder="MM/YY" maxlength="5" pattern="[0-9]{2}/[0-9]{2}" inputmode="numeric" required />
             </div>
             <div class="field-group">
               <label>CVC</label>
               <div class="input-wrapper">
-                <input type="text" placeholder="123" maxlength="4" />
+                <input type="text" placeholder="123" maxlength="4" pattern="[0-9]{3,4}" inputmode="numeric" required />
                 <i class="fa-solid fa-lock input-icon"></i>
               </div>
             </div>
@@ -76,20 +77,21 @@
 
           <div class="field-group">
             <label>Name on Card</label>
-            <input type="text" placeholder="John Doe" />
+            <input type="text" placeholder="John Doe" maxlength="30" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,30}" required />
           </div>
         </div>
       </div>
 
       <!-- Billing Address -->
-      <div class="form-section">
+      <div class="form-section" style="margin-top: 28px;">
         <h2 class="form-section-title">Billing Address</h2>
         <div class="card-box">
 
           <div class="field-group">
             <label>Country/Region</label>
             <div class="input-wrapper select-wrapper">
-              <select>
+              <select required>
+                <option value="">Select a country</option>
                 <option>United States</option>
                 <option>Colombia</option>
                 <option>Mexico</option>
@@ -102,85 +104,91 @@
 
           <div class="field-group">
             <label>Street Address</label>
-            <input type="text" placeholder="123 Music Lane" />
+            <input type="text" placeholder="123 Music Lane" maxlength="60" required />
           </div>
 
           <div class="field-row">
             <div class="field-group">
               <label>City</label>
-              <input type="text" placeholder="Nashville" />
+              <input type="text" placeholder="Nashville" maxlength="30" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,30}" required />
             </div>
             <div class="field-group">
               <label>State/Province</label>
-              <input type="text" placeholder="Tennessee" />
+              <input type="text" placeholder="Tennessee" maxlength="30" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,30}" required />
             </div>
           </div>
 
           <div class="field-group half">
             <label>Postal Code</label>
-            <input type="text" placeholder="37203" />
+            <input type="text" placeholder="37203" maxlength="10" pattern="[0-9]{1,10}" inputmode="numeric" required />
           </div>
 
         </div>
       </div>
-    </section>
 
-    <!-- COLUMNA DERECHA: resumen -->
-    <aside class="order-summary">
-      <h2 class="summary-title">Order Summary</h2>
+      <!-- Botón submit oculto para que el form funcione -->
+      <button type="submit" style="display:none" id="submit-btn"></button>
 
-      <div class="summary-item">
-        <div class="summary-cover">
-          <img src="assets/img/portals-MM.jpg" alt="Portals" />
-        </div>
-        <div class="summary-info">
-          <span class="summary-name">Portals</span>
-          <span class="summary-artist">Melanie Martinez</span>
-        </div>
-        <span class="summary-price">$9.99</span>
+    </form>
+  </section>
+
+  <!-- COLUMNA DERECHA: resumen -->
+  <aside class="order-summary">
+    <h2 class="summary-title">Order Summary</h2>
+
+    <div class="summary-item">
+      <div class="summary-cover">
+        <img src="assets/img/portals-MM.jpg" alt="Portals" />
       </div>
-
-      <div class="summary-item">
-        <div class="summary-cover placeholder-cover">
-         <img src="assets/img/evanescence- ultimo.jpg" alt="">
-        </div>
-        <div class="summary-info">
-          <span class="summary-name">Evanescence Fallen</span>
-          <span class="summary-artist">evanescence</span>
-        </div>
-        <span class="summary-price">$7.99</span>
+      <div class="summary-info">
+        <span class="summary-name">Portals</span>
+        <span class="summary-artist">Melanie Martinez</span>
       </div>
+      <span class="summary-price">$9.99</span>
+    </div>
 
-      <div class="summary-divider"></div>
-
-      <div class="summary-row">
-        <span>Subtotal</span>
-        <span>$17,98</span>
+    <div class="summary-item">
+      <div class="summary-cover placeholder-cover">
+        <img src="assets/img/evanescence- ultimo.jpg" alt="">
       </div>
-      <div class="summary-row">
-        <span>Taxes</span>
-        <span>$1.84</span>
+      <div class="summary-info">
+        <span class="summary-name">Evanescence Fallen</span>
+        <span class="summary-artist">Evanescence</span>
       </div>
+      <span class="summary-price">$7.99</span>
+    </div>
 
-      <div class="summary-divider"></div>
+    <div class="summary-divider"></div>
 
-      <div class="summary-row total-row">
-        <span>Total</span>
-        <span>$19,82</span>
-      </div>
+    <div class="summary-row">
+      <span>Subtotal</span>
+      <span>$17.98</span>
+    </div>
+    <div class="summary-row">
+      <span>Taxes</span>
+      <span>$1.84</span>
+    </div>
 
-      <button class="btn-place-order">
-        <i class="fa-solid fa-lock"></i>
-        <a href="success.html">Place Order & Pay $19,82</a>
-      </button>
+    <div class="summary-divider"></div>
 
-      <p class="terms-text">
-        By placing this order, you agree to our
-        <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
-      </p>
-    </aside>
+    <div class="summary-row total-row">
+      <span>Total</span>
+      <span>$19.82</span>
+    </div>
 
-  </main>
+    <!-- Este botón dispara el submit del form -->
+    <button type="button" class="btn-place-order" onclick="document.getElementById('submit-btn').click()">
+      <i class="fa-solid fa-lock"></i>
+      Place Order & Pay $19.82
+    </button>
+
+    <p class="terms-text">
+      By placing this order, you agree to our
+      <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
+    </p>
+  </aside>
+
+</main>
 
 </body>
 </html>

@@ -342,6 +342,21 @@ a { text-decoration: none; color: inherit; }
   transition: color 0.15s;
 }
 
+.field-error {
+  font-size: 11px;
+  color: #ef4444;
+  display: none;
+  margin-top: 4px;
+}
+
+.field-error.visible {
+  display: block;
+}
+
+.field-group input.invalid {
+  border-color: #ef4444;
+}
+
 .terms-text a:hover { color: #3a8ff5; }
 
 /* ===== RESPONSIVE ===== */
