@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MusicStream - k-12</title>
+  <link rel="stylesheet" href="css/style-k12.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="shortcut icon" href="/assets/img/icons/logo_kirby.ico" type="image/x-icon">
+<iframe src="player-k12.html" class="player-iframe" scrolling="no" frameborder="0"></iframe>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-left">
+    <div class="logo">
+    <img src="assets/img/icons/gif/rocola.gif" alt="logo" class="logo-icon-gif" />
+        <span class="logo-text">MusicStream</span>
+      </div>
+      <div class="search-bar">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search artists, albums..." />
+      </div>
+    </div>
+    <div class="nav-right">
+    <a href="store.html" class="nav-link">Home</a>
+    <a href="player-k12.html">Discover</a>
+    <a href="#" class="nav-link">Browse</a>
+    <a href="#" class="nav-link">Library</a>
+    <button class="icon-btn" onclick="window.location.href='cart.html'">
+    <i class="fa-solid fa-cart-shopping"></i>
+    </button>
+    <div class="avatar">
+        <img src="assets/img/logo-foto1.png" alt="perfil" />
+    </div>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <a href="index.html">Home</a>
+    <span>/</span>
+    <a href="#">Artist</a>
+    <span>/</span>
+    <span class="active">k-12</span>
+  </div>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="main-content">
+
+    <!-- COLUMNA IZQUIERDA -->
+    <aside class="album-sidebar">
+        <div class="card">
+            <div class="wrapper">
+                <img src="assets/img/MM- K-12.jpg" class="cover-image" />
+            </div>
+            <img src="assets/img/logo-k12.png" class="title" />
+            <img src="assets/img/person-k12.png" class="character" />
+        </div>
+        <h1 class="album-title">K-12</h1>
+        <p class="album-meta">Melanie Martinez • 2019 • Dark pop</p>
+        <button class="btn-cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <a href="cart.html">Add Album to Cart - $12.99</a>
+        </button>
+        <div class="btn-row">
+            <button class="btn-secondary">
+                <i class="fa-regular fa-heart"></i> Wishlist
+            </button>
+            <button class="btn-secondary">
+                <i class="fa-solid fa-share-nodes"></i> Share
+            </button>
+        </div>
+    </aside>
+
+    <!-- COLUMNA DERECHA ← esto te faltaba dentro del main -->
+    <section class="album-detail">
+        <h2 class="section-title">List</h2>
+        <table class="tracklist">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Title</th>
+                    <th>Artist</th>
+                    <th><i class="fa-regular fa-clock"></i></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="track-row">
+                    <td class="track-num">1</td>
+                    <td class="track-title">Nurse's Office</td>
+                    <td class="track-artist">Melanie Martinez</td>
+                    <td class="track-duration">3:22 </td>
+                </tr>
+                <tr class="track-row">
+                    <td class="track-num">2</td>
+                    <td class="track-title">Orange Juice</td>
+                    <td class="track-artist">Melanie Martinez</td>
+                    <td class="track-duration">3:37</td>
+                </tr>
+                <tr class="track-row">
+                    <td class="track-num">3</td>
+                    <td class="track-title">Show & tell</td>
+                    <td class="track-artist">Melanie Martinez</td>
+                    <td class="track-duration">3:35</td>
+                </tr>
+                <tr class="track-row">
+                    <td class="track-num">4</td>
+                    <td class="track-title">High School Sweethearts</td>
+                    <td class="track-artist">Melanie Martinez</td>
+                    <td class="track-duration">5:51</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="tabs">
+            <button class="tab active">About the Artist</button>
+            <button class="tab">Reviews</button>
+            <button class="tab">Credits</button>
+        </div>
+        <div class="tab-content">
+            <p>Melanie Martinez's album K-12 is a conceptual album that follows the story of the character Cry Baby within a fictional school. Through its songs and the movie that accompanies the album, the educational system, social norms, and the injustices faced by young people, such as bullying, social pressure, gender stereotypes, and authority control, are criticized. Using a childlike aesthetic but with deep themes, the album shows how Cry Baby and her friends discover the reality of the world, question the rules, and seek to free themselves from a system that tries to shape them.</p>
+        </div>
+    </section>
+
+</main>  <!-- ← el main cierra AQUÍ, después de ambas columnas -->
+</body>
+</html>

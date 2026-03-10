@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MusicStream - Artists</title>
+  <link rel="shortcut icon" href="assets/img/icons/logo_kirby.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/artist.css"/>
+</head>
+<body>
+
+  <!-- RADIO INPUTS: controlan el carrusel sin JS -->
+  <input type="radio" name="artist" id="a1" class="carousel-input" checked />
+  <input type="radio" name="artist" id="a2" class="carousel-input" />
+  <input type="radio" name="artist" id="a3" class="carousel-input" />
+  <input type="radio" name="artist" id="a4" class="carousel-input" />
+  <input type="radio" name="artist" id="a5" class="carousel-input" />
+  <input type="radio" name="artist" id="a6" class="carousel-input" />
+  <input type="radio" name="artist" id="a7" class="carousel-input" />
+  <input type="radio" name="artist" id="a8" class="carousel-input" />
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <div class="logo">
+        <img src="assets/img/icons/gif/rocola.gif" alt="logo" class="logo-icon-gif" />
+        <span class="logo-text">MusicStream</span>
+      </div>
+      <div class="search-bar">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search" />
+      </div>
+    </div>
+    <div class="nav-center">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="#" class="nav-link active">Browse</a>
+      <a href="#" class="nav-link">Library</a>
+      <a href="store.html" class="nav-link">Store</a>
+    </div>
+    <div class="nav-right">
+      <div class="avatar">
+        <img src="assets/img/logo-foto1.png" alt="perfil" />
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <h1>Artists</h1>
+    <p>Explore your favorite artists — click a card to learn more</p>
+  </div>
+
+  <!-- CAROUSEL SECTION -->
+  <div class="carousel-section">
+    <div class="carousel-3d">
+      <div class="carousel-track">
+
+        <label for="a1" class="artist-card">
+          <img src="assets/img/ultimo.jpg" alt="Melanie Martinez" />
+          <div class="artist-card-overlay">
+            <div class="artist-card-name">Melanie Martinez</div>
+            <div class="artist-card-genre">Alt Pop</div>
+          </div>
+        </label>
+
+        <label for="a2" class="artist-card">
+          <img src="assets/img/Amy Lee.jpg" alt="Evanescence" />
+          <div class="artist-card-overlay">
+            <div class="artist-card-name">Evanescence</div>
+            <div class="artist-card-genre">Rock / Metal</div>
+          </div>
+        </label>
+
+        <label for="a3" class="artist-card">
+          <img src="assets/img/Mitski Puberty 2 Title Wallpaper ☆.jpg" alt="Mitski" />
+          <div class="artist-card-overlay">
+            <div class="artist-card-name">Mitski</div>
+            <div class="artist-card-genre">Indie Rock</div>
+          </div>
+        </label>
+
+        <label for="a4" class="artist-card">
+          <img src="assets/img/Billie Eilish Wallper.jpg" alt="Billie Eilish" />
+          <div class="artist-card-overlay">
+            <div class="artist-card-name">Billie Eilish</div>
+            <div class="artist-card-genre">Pop / Alt</div>
+          </div>
+        </label>
+
+        <label for="a5" class="artist-card">
+          <img src="assets/img/Ariana Grande (1).jpg" alt="Ariana Grande" />
+          <div class="artist-card-overlay">
+            <div class="artist-card-name">Ariana Grande</div>
+            <div class="artist-card-genre">Pop / R&B</div>
+          </div>
+        </label>
+
+        <label for="a6" class="artist-card">
+          <img src="assets/img/rihanna.jpg" alt="Rihanna" />
+          <div class="artist-card-overlay">
+            <div class="artist-card-name">Rihanna</div>
+            <div class="artist-card-genre">Pop / R&B</div>
+          </div>
+        </label>
+
+        <label for="a7" class="artist-card">
+          <img src="assets/img/Lady Gaga.jpg" alt="Lady Gaga" />
+          <div class="artist-card-overlay">
+            <div class="artist-card-name">Lady Gaga</div>
+            <div class="artist-card-genre">Pop / Dance</div>
+          </div>
+        </label>
+
+        <label for="a8" class="artist-card">
+          <img src="assets/img/post-tvgirl.jpg" alt="TV Girl" />
+          <div class="artist-card-overlay">
+            <div class="artist-card-name">TV Girl</div>
+            <div class="artist-card-genre">Indie Pop</div>
+          </div>
+        </label>
+
+      </div>
+    </div>
+
+    <!-- DOTS -->
+    <div class="carousel-dots">
+      <label for="a1" class="dot-label dot-1"></label>
+      <label for="a2" class="dot-label dot-2"></label>
+      <label for="a3" class="dot-label dot-3"></label>
+      <label for="a4" class="dot-label dot-4"></label>
+      <label for="a5" class="dot-label dot-5"></label>
+      <label for="a6" class="dot-label dot-6"></label>
+      <label for="a7" class="dot-label dot-7"></label>
+      <label for="a8" class="dot-label dot-8"></label>
+    </div>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <!-- ARTIST INFO PANELS -->
+  <div class="artist-info-wrapper">
+
+    <div class="artist-info info-1">
+      <div class="info-header">
+        <h2 class="info-name">Melanie Martinez</h2>
+        <span class="info-genre-badge">Alt Pop</span>
+      </div>
+      <p class="info-description">Melanie Martinez is an American singer, songwriter, and director known for her dark, whimsical aesthetic and concept albums. Her music blends dreamy pop with unsettling themes, creating a unique universe of characters and stories.</p>
+      <div class="info-albums-title">Albums</div>
+      <div class="info-albums">
+        <span class="album-tag">Cry Baby (2015)</span>
+        <span class="album-tag">K-12 (2019)</span>
+        <span class="album-tag">After School EP (2020)</span>
+        <span class="album-tag">Portals (2023)</span>
+      </div>
+    </div>
+
+    <div class="artist-info info-2">
+      <div class="info-header">
+        <h2 class="info-name">Evanescence</h2>
+        <span class="info-genre-badge">Rock / Metal</span>
+      </div>
+      <p class="info-description">Evanescence is an American rock band formed in Little Rock, Arkansas in 1995. Led by vocalist Amy Lee, they blend alternative metal, gothic rock, and classical influences into a powerful, emotionally charged sound.</p>
+      <div class="info-albums-title">Albums</div>
+      <div class="info-albums">
+        <span class="album-tag">Fallen (2003)</span>
+        <span class="album-tag">The Open Door (2006)</span>
+        <span class="album-tag">Evanescence (2011)</span>
+        <span class="album-tag">The Bitter Truth (2021)</span>
+      </div>
+    </div>
+
+    <div class="artist-info info-3">
+      <div class="info-header">
+        <h2 class="info-name">Mitski</h2>
+        <span class="info-genre-badge">Indie Rock</span>
+      </div>
+      <p class="info-description">Mitski Miyawaki is a Japanese-American singer-songwriter known for her emotionally raw and intense music. Her work explores themes of loneliness, identity, and longing with a sound that shifts between intimate folk and explosive indie rock.</p>
+      <div class="info-albums-title">Albums</div>
+      <div class="info-albums">
+        <span class="album-tag">Bury Me at Makeout Creek (2014)</span>
+        <span class="album-tag">Puberty 2 (2016)</span>
+        <span class="album-tag">Be the Cowboy (2018)</span>
+        <span class="album-tag">Laurel Hell (2022)</span>
+      </div>
+    </div>
+
+    <div class="artist-info info-4">
+      <div class="info-header">
+        <h2 class="info-name">Billie Eilish</h2>
+        <span class="info-genre-badge">Pop / Alt</span>
+      </div>
+      <p class="info-description">Billie Eilish is an American singer and songwriter who first gained widespread recognition at age 13. Known for her whispery vocals, genre-blending sound, and bold visual identity, she became the youngest artist to win the four major Grammy categories in the same year.</p>
+      <div class="info-albums-title">Albums</div>
+      <div class="info-albums">
+        <span class="album-tag">When We All Fall Asleep (2019)</span>
+        <span class="album-tag">Happier Than Ever (2021)</span>
+        <span class="album-tag">Hit Me Hard and Soft (2024)</span>
+      </div>
+    </div>
+
+    <div class="artist-info info-5">
+      <div class="info-header">
+        <h2 class="info-name">Ariana Grande</h2>
+        <span class="info-genre-badge">Pop / R&B</span>
+      </div>
+      <p class="info-description">Ariana Grande is an American singer, songwriter, and actress from Boca Raton, Florida. Known for her four-octave vocal range, she became one of the best-selling music artists of all time. Her music blends pop, R&B, and trap with deeply personal storytelling.</p>
+      <div class="info-albums-title">Albums</div>
+      <div class="info-albums">
+        <span class="album-tag">Yours Truly (2013)</span>
+        <span class="album-tag">Sweetener (2018)</span>
+        <span class="album-tag">Thank U, Next (2019)</span>
+        <span class="album-tag">Positions (2020)</span>
+      </div>
+    </div>
+
+    <div class="artist-info info-6">
+      <div class="info-header">
+        <h2 class="info-name">Rihanna</h2>
+        <span class="info-genre-badge">Pop / R&B</span>
+      </div>
+      <p class="info-description">Robyn Rihanna Fenty is a Barbadian singer, actress, and businesswoman. One of the best-selling music artists of all time with over 250 million records sold worldwide, known for her versatile vocal style and ability to adapt to multiple musical genres.</p>
+      <div class="info-albums-title">Albums</div>
+      <div class="info-albums">
+        <span class="album-tag">Music of the Sun (2005)</span>
+        <span class="album-tag">Good Girl Gone Bad (2007)</span>
+        <span class="album-tag">Rated R (2009)</span>
+        <span class="album-tag">Anti (2016)</span>
+      </div>
+    </div>
+
+    <div class="artist-info info-7">
+      <div class="info-header">
+        <h2 class="info-name">Lady Gaga</h2>
+        <span class="info-genre-badge">Pop / Dance</span>
+      </div>
+      <p class="info-description">Lady Gaga is an American singer, songwriter, and actress known for her musical versatility, visual experimentation, and provocative work. She has sold more than 170 million records worldwide and won numerous Grammy Awards throughout her career.</p>
+      <div class="info-albums-title">Albums</div>
+      <div class="info-albums">
+        <span class="album-tag">The Fame (2008)</span>
+        <span class="album-tag">The Fame Monster (2009)</span>
+        <span class="album-tag">Born This Way (2011)</span>
+        <span class="album-tag">Chromatica (2020)</span>
+      </div>
+    </div>
+
+    <div class="artist-info info-8">
+      <div class="info-header">
+        <h2 class="info-name">TV Girl</h2>
+        <span class="info-genre-badge">Indie Pop</span>
+      </div>
+      <p class="info-description">TV Girl is an American indie pop band from San Diego, California. Known for their dreamy, sample-based sound that blends lo-fi indie pop with nostalgic references to pop culture. Their music features bittersweet melodies and witty lyrics about modern romance.</p>
+      <div class="info-albums-title">Albums</div>
+      <div class="info-albums">
+        <span class="album-tag">French Exit (2014)</span>
+        <span class="album-tag">Who Really Cares (2014)</span>
+        <span class="album-tag">Death of a Party Girl (2023)</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="height: 60px;"></div>
+
+</body>
+</html>

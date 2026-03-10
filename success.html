@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MusicStream - Purchase Successful</title>
+  <link rel="stylesheet" href="css/success.css" />
+  <link rel="shortcut icon" href="/assets/img/icons/logo_kirby.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <div class="logo">
+        <img src="assets/img/icons/gif/rocola.gif" alt="logo" class="logo-icon-gif" />
+        <span class="logo-text">MusicStream</span>
+      </div>
+      <div class="nav-links">
+        <a href="#" class="nav-link">Discover</a>
+        <a href="#" class="nav-link">Library</a>
+        <a href="store.html" class="nav-link">Store</a>
+      </div>
+    </div>
+    <div class="nav-right">
+      <div class="search-bar">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Artists, albums, tracks" />
+      </div>
+      <div class="avatar">
+        <img src="assets/img/logo-foto1.png" alt="perfil" />
+      </div>
+    </div>
+  </nav>
+
+  <!-- LAYOUT PRINCIPAL -->
+  <div class="page-layout">
+
+    <!-- SIDEBAR IZQUIERDO -->
+    <aside class="sidebar">
+      <p class="sidebar-heading">MY MUSIC</p>
+      <ul class="sidebar-menu">
+        <li class="sidebar-item">
+          <i class="fa-solid fa-clock-rotate-left"></i>
+          <span>Recently Purchased</span>
+        </li>
+        <li class="sidebar-item">
+          <i class="fa-regular fa-circle"></i>
+          <span>My Albums</span>
+        </li>
+        <li class="sidebar-item">
+          <i class="fa-regular fa-heart"></i>
+          <span>Liked Songs</span>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- CONTENIDO CENTRAL -->
+    <main class="success-content">
+
+      <!-- Ícono de éxito -->
+      <div class="success-icon">
+        <i class="fa-solid fa-check"></i>
+      </div>
+
+      <h1 class="success-title">Purchase Successful!</h1>
+      <p class="success-desc">
+        Thank you for your purchase. A confirmation email has been sent to your
+        registered address. You can now find your new music in your library.
+      </p>
+
+      <!-- Order Summary -->
+      <div class="order-box">
+        <h2 class="order-box-title">Order Summary</h2>
+
+        <div class="order-item">
+          <div class="order-cover">
+            <img src="assets/img/portals-MM.jpg" alt="Portals" />
+          </div>
+          <div class="order-info">
+            <span class="order-name">Portals</span>
+            <span class="order-artist">Melanie Martinez</span>
+          </div>
+          <span class="order-price">$9.99</span>
+        </div>
+        <div class="order-item">
+          <div class="order-cover">
+            <img src="assets/img/evanescence- ultimo.jpg" alt="Portals" />
+          </div>
+        <div class="order-info">
+            <span class="order-name">evanescence Fallen</span>
+            <span class="order-artist">evanescence</span>
+          </div>
+          <span class="order-price">$7.99</span>
+        </div>
+        
+
+        <div class="order-divider"></div>
+
+        <div class="order-meta-row">
+          <span class="order-meta-label">Total:</span>
+          <span class="order-meta-value">$19.82</span>
+        </div>
+        <div class="order-meta-row">
+          <span class="order-meta-label">Order ID:</span>
+          <span class="order-id">#ABC - 123 - XYZ - 456</span>
+        </div>
+      </div>
+
+      <!-- Botones -->
+      <div class="success-buttons">
+        <button class="btn-secondary" onclick="window.location.href='#'">
+          View Order History
+        </button>
+        <button class="btn-primary" onclick="window.location.href='store.html'">
+          Return to Store
+        </button>
+      </div>
+
+    </main>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,259 @@
+/* ===== RESET & BASE ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0f172a;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* ===== BARRA DEL REPRODUCTOR ===== */
+.player-bar {
+  width: 100%;
+  background-color: rgba(#0f172a  , 0, 0, 0.6);
+  border-top: 1px solid gray;
+  padding: 0 24px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+/* ===== SECCIÓN IZQUIERDA: INFO DE CANCIÓN ===== */
+.song-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 200px;
+  flex: 1;
+}
+
+.album-art {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #3a3a3a, #555);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.song-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.portals{
+    width: 50px;
+    
+}
+.song-title {
+  color: #fcfcfc;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.song-artist {
+  color: #f6f6f6;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+/* ===== SECCIÓN CENTRAL: CONTROLES ===== */
+.controls-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  flex: 2;
+  max-width: 560px;
+}
+
+.control-buttons {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.ctrl-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #b3b3b3;
+  font-size: 15px;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.15s ease, transform 0.1s ease;
+  border-radius: 50%;
+}
+
+.ctrl-btn:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+/* Botón de play/pausa: círculo azul */
+.play-btn {
+  background-color: #255eb8;
+  color: #ffffff !important;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 13px;
+  box-shadow: 0 0 10px rgb(255, 255, 255);
+  transition: background-color 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease;
+}
+
+.play-btn:hover {
+  background-color: #ffffff;
+  transform: scale(1.08);
+  box-shadow: 0 0 16px rgba(29, 123, 245, 0.7);
+}
+
+/* ===== BARRA DE PROGRESO ===== */
+.progress-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.time {
+  color: #a0a0a0;
+  font-size: 11px;
+  min-width: 32px;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 4px;
+  background-color: #3a3a3a;
+  border-radius: 2px;
+  position: relative;
+  cursor: pointer;
+  transition: height 0.15s ease;
+}
+
+.progress-bar:hover {
+  height: 6px;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #1d7bf5;
+  border-radius: 2px;
+  pointer-events: none;
+  transition: background-color 0.15s ease;
+}
+
+.progress-bar:hover .progress-fill {
+  background-color: #ffffff;
+}
+
+.progress-thumb {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  background-color: #958484;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  box-shadow: 0 0 4px rgba(0,0,0,0.4);
+}
+
+.progress-bar:hover .progress-thumb {
+  opacity: 1;
+}
+
+/* ===== SECCIÓN DERECHA: VOLUMEN ===== */
+.volume-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 150px;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.volume-icon {
+  font-size: 14px;
+}
+
+.volume-bar {
+  width: 90px;
+  height: 4px;
+  background-color: #3a3a3a;
+  border-radius: 2px;
+  position: relative;
+  cursor: pointer;
+  transition: height 0.15s ease;
+}
+
+.volume-bar:hover {
+  height: 6px;
+}
+
+.volume-fill {
+  height: 100%;
+  background-color: #b3b3b3;
+  border-radius: 2px;
+  pointer-events: none;
+  transition: background-color 0.15s ease;
+}
+
+.volume-bar:hover .volume-fill {
+  background-color: #ffffff;
+}
+
+.volume-thumb {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.volume-bar:hover .volume-thumb {
+  opacity: 1;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 640px) {
+  .song-info {
+    min-width: 120px;
+    flex: 0 0 auto;
+  }
+
+  .volume-section {
+    display: none;
+  }
+
+  .player-bar {
+    padding: 0 12px;
+  }
+}

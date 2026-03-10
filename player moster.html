@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>MusicStream - Lady Gaga</title>
+<link rel="stylesheet" href="css/views/player.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<link rel="shortcut icon" href="/assets/img/icons/logo_kirby.ico" type="image/x-icon">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="nav-left">
+    <div class="logo">
+        <img src="assets/img/icons/gif/rocola.gif" alt="logo" class="logo-icon-gif" />
+        <span class="logo-text">MusicStream</span>
+    </div>
+    <div class="search-bar">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search" />
+    </div>
+    </div>
+    <div class="nav-center">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="#" class="nav-link">Browse</a>
+    <a href="#" class="nav-link">Library</a>
+    <a href="store.html" class="nav-link">Store</a>
+    </div>
+    <div class="nav-right">
+    <button class="icon-btn"><i class="fa-solid fa-bell"></i></button>
+    <div class="avatar">
+    <img src="assets/img/logo-foto1.png" alt="perfil" />
+    </div>
+</div>
+</nav>
+
+<!-- CONTENIDO PRINCIPAL -->
+<main class="main-content">
+
+  <!-- COLUMNA IZQUIERDA: portada + info -->
+<section class="now-playing">
+    <div class="vinyl-container">
+    <!-- Disco giratorio atrás -->
+        <div class="disc">
+        <div class="disc-hole"></div>
+        </div>
+    <!-- Portada polaroid adelante -->
+    <div class="vinyl-card">
+        <img src="assets/img/Lady Gaga The Fame Monster Album Cover Deluxe Edition.jpg" alt="K-12" class="album-img" />
+        <div class="vinyl-label">The Fame Monster · Lady Gaga</div>
+    </div>
+    </div>
+    <div class="song-details">
+    <div class="song-title-row">
+        <button class="like-btn"><i class="fa-regular fa-heart"></i></button>
+    </div>
+    <p class="song-artist">Lady Gaga</p>
+    <p class="song-album">The Fame Monster</p>
+    </div>
+</section>
+
+    <!-- COLUMNA DERECHA: Up Next -->
+    <aside class="up-next">
+    <h2 class="up-next-title">Up Next</h2>
+    <ul class="queue-list">
+    <li class="queue-item">
+        <div class="queue-cover">
+        <img src="assets/img/Lady Gaga The Fame Monster Album Cover Deluxe Edition.jpg" alt="foto del album de la cancion" />
+        </div>
+        <div class="queue-info">
+        <span class="queue-name">Alejandro</span>
+        <span class="queue-artist">Lady Gaga</span>
+        </div>
+        <span class="queue-duration">4:34</span>
+    </li>
+    <li class="queue-item">
+        <div class="queue-cover">
+        <img src="assets/img/Lady Gaga The Fame Monster Album Cover Deluxe Edition.jpg" alt="Milk of the Siren" />
+        </div>
+        <div class="queue-info">
+        <span class="queue-name">Telephone</span>
+        <span class="queue-artist">Lady Gaga</span>
+        </div>
+        <span class="queue-duration">3:40</span>
+    </li>
+    <li class="queue-item">
+        <div class="queue-cover">
+        <img src="assets/img/Lady Gaga The Fame Monster Album Cover Deluxe Edition.jpg" alt="Tunnel Vision" />
+        </div>
+        <div class="queue-info">
+        <span class="queue-name">Monster</span>
+        <span class="queue-artist">Lady Gaga</span>
+        </div>
+        <span class="queue-duration">4:09</span>
+    </li>
+    </ul>
+    </aside>
+
+</main>
+
+<!-- PLAYER BAR (fija abajo) -->
+<div class="player-bar">
+
+    <div class="song-info">
+        <div class="album-art">
+            <img class="portals" src="assets/img/Lady Gaga The Fame Monster Album Cover Deluxe Edition.jpg" alt="portals" />
+        </div>
+    <div class="song-text">
+        <span class="song-title-player"> Bad Romance</span>
+        <span class="song-artist-player">Lady Gaga</span>
+    </div>
+</div>
+
+<div class="controls-center">
+    <div class="control-buttons">
+        <button class="ctrl-btn" title="Aleatorio"><i class="fa-solid fa-shuffle"></i></button>
+        <button class="ctrl-btn" title="Anterior"><i class="fa-solid fa-backward-step"></i></button>
+        <button class="ctrl-btn play-btn" title="Reproducir"><i class="fa-solid fa-play"></i></button>
+        <button class="ctrl-btn" title="Siguiente"><i class="fa-solid fa-forward-step"></i></button>
+        <button class="ctrl-btn" title="Repetir"><i class="fa-solid fa-repeat"></i></button>
+    </div>
+    <div class="progress-row">
+    <span class="time current">0:00</span>
+    <div class="progress-bar">
+        <div class="progress-fill" style="width: 0%;"></div>
+        <div class="progress-thumb" style="left: 0%;"></div>
+    </div>
+    <span class="time total">4:54</span>
+    </div>
+    </div>
+
+<div class="volume-section">
+    <button class="ctrl-btn volume-icon" title="Volumen"><i class="fa-solid fa-volume-low"></i></button>
+        <div class="volume-bar">
+        <div class="volume-fill" style="width: 65%;"></div>
+        <div class="volume-thumb" style="left: 65%;"></div>
+        </div>
+    </div>
+</body>
+</html>

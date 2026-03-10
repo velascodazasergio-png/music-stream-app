@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MusicStream</title>
+  <link rel="stylesheet" href="css/positions.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="shortcut icon" href="/assets/img/icons/logo_kirby.ico" type="image/x-icon">
+<iframe src="player positions.html" class="player-iframe" scrolling="no" frameborder="0"></iframe>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-left">
+    <div class="logo">
+    <img src="assets/img/icons/gif/rocola.gif" alt="logo" class="logo-icon-gif" />
+        <span class="logo-text">MusicStream</span>
+      </div>
+      <div class="search-bar">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search artists, albums..." />
+      </div>
+    </div>
+    <div class="nav-right">
+    <a href="store.html" class="nav-link">Home</a>
+    <a href="player positions.html">Discover</a>
+    <a href="#" class="nav-link">Browse</a>
+    <a href="#" class="nav-link">Library</a>
+    <button class="icon-btn" onclick="window.location.href='cart.html'">
+    <i class="fa-solid fa-cart-shopping"></i>
+    </button>
+    <div class="avatar">
+        <img src="assets/img/logo-foto1.png" alt="perfil" />
+    </div>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <a href="index.html">Home</a>
+    <span>/</span>
+    <a href="#">Artist</a>
+    <span>/</span>
+    <span class="active">Positions</span>
+  </div>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="main-content">
+
+    <!-- COLUMNA IZQUIERDA -->
+    <aside class="album-sidebar">
+        <div class="card">
+            <div class="wrapper">
+                <img src="assets/img/positions.jpg" class="cover-image" />
+            </div>
+            <img src="assets/img/logo positions.png" class="title" />
+            <img src="assets/img/character positions.png" class="character" />
+        </div>
+        <h1 class="album-title">Positions</h1>
+        <p class="album-meta">Ariana Grande • 2020 • pop</p>
+        <button class="btn-cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <a href="cart.html">Add Album to Cart - $8.99</a>
+        </button>
+        <div class="btn-row">
+            <button class="btn-secondary">
+                <i class="fa-regular fa-heart"></i> Wishlist
+            </button>
+            <button class="btn-secondary">
+                <i class="fa-solid fa-share-nodes"></i> Share
+            </button>
+        </div>
+    </aside>
+
+    <!-- COLUMNA DERECHA ← esto te faltaba dentro del main -->
+    <section class="album-detail">
+        <h2 class="section-title">List</h2>
+        <table class="tracklist">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Title</th>
+                    <th>Artist</th>
+                    <th><i class="fa-regular fa-clock"></i></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="track-row">
+                    <td class="track-num">1</td>
+                    <td class="track-title">Shut up</td>
+                    <td class="track-artist">Ariana Grande</td>
+                    <td class="track-duration">2:37</td>
+                </tr>
+                <tr class="track-row">
+                    <td class="track-num">2</td>
+                    <td class="track-title">Just like magic</td>
+                    <td class="track-artist">Ariana Grande</td>
+                    <td class="track-duration">2:29</td>
+                </tr>
+                <tr class="track-row">
+                    <td class="track-num">3</td>
+                    <td class="track-title">34 + 35</td>
+                    <td class="track-artist">Ariana Grande</td>
+                    <td class="track-duration">2:53</td>
+                </tr>
+                <tr class="track-row">
+                    <td class="track-num">4</td>
+                    <td class="track-title">Obvious</td>
+                    <td class="track-artist">Ariana Grande</td>
+                    <td class="track-duration">2:26</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="tabs">
+            <button class="tab active">About the Artist</button>
+            <button class="tab">Reviews</button>
+            <button class="tab">Credits</button>
+        </div>
+        <div class="tab-content">
+            <p>It mainly deals with love, mature relationships, intimacy, and emotional stability. In this album, Ariana shows a calmer and more confident stage of her life, talking about commitment, trust in a relationship, and how to balance her personal life with her career. Unlike her previous album, here the focus is more romantic and relaxed.</p>
+        </div>
+    </section>
+
+</main>  <!-- ← el main cierra AQUÍ, después de ambas columnas -->
+</body>
+</html>

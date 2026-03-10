@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MusicStream</title>
+  <link rel="stylesheet" href="css/happier than ever.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="shortcut icon" href="/assets/img/icons/logo_kirby.ico" type="image/x-icon">
+<iframe src="player happier than ever.html" class="player-iframe" scrolling="no" frameborder="0"></iframe>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-left">
+    <div class="logo">
+    <img src="assets/img/icons/gif/rocola.gif" alt="logo" class="logo-icon-gif" />
+        <span class="logo-text">MusicStream</span>
+      </div>
+      <div class="search-bar">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search artists, albums..." />
+      </div>
+    </div>
+    <div class="nav-right">
+    <a href="store.html" class="nav-link">Home</a>
+    <a href="player happier than ever.html" class="nav-link">Discover</a>
+    <a href="#" class="nav-link">Browse</a>
+    <a href="#" class="nav-link">Library</a>
+    <button class="icon-btn" onclick="window.location.href='cart.html'">
+    <i class="fa-solid fa-cart-shopping"></i>
+    </button>
+    <div class="avatar">
+        <img src="assets/img/logo-foto1.png" alt="perfil" />
+    </div>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <a href="index.html">Home</a>
+    <span>/</span>
+    <a href="#">Artist</a>
+    <span>/</span>
+    <span class="active">Happier than ever</span>
+  </div>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="main-content">
+
+    <!-- COLUMNA IZQUIERDA -->
+    <aside class="album-sidebar">
+        <div class="card">
+            <div class="wrapper">
+                <img src="assets/img/billie eilish.jpg" class="cover-image" />
+            </div>
+            <img src="assets/img/logo-happier.png" class="title" />
+            <img src="assets/img/character-happier.png" class="character" />
+        </div>
+        <h1 class="album-title">Happier than ever</h1>
+        <p class="album-meta">Billie Eilish • 2021 • pop</p>
+        <button class="btn-cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <a href="cart.html">Add Album to Cart - $9.99</a>
+        </button>
+        <div class="btn-row">
+            <button class="btn-secondary">
+                <i class="fa-regular fa-heart"></i> Wishlist
+            </button>
+            <button class="btn-secondary">
+                <i class="fa-solid fa-share-nodes"></i> Share
+            </button>
+        </div>
+    </aside>
+
+    <!-- COLUMNA DERECHA ← esto te faltaba dentro del main -->
+    <section class="album-detail">
+        <h2 class="section-title">List</h2>
+        <table class="tracklist">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Title</th>
+                    <th>Artist</th>
+                    <th><i class="fa-regular fa-clock"></i></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="track-row">
+                    <td class="track-num">1</td>
+                    <td class="track-title">Happier Than Ever</td>
+                    <td class="track-artist">Billie Eilish</td>
+                    <td class="track-duration">4:58</td>
+                </tr>
+                <tr class="track-row">
+                    <td class="track-num">2</td>
+                    <td class="track-title">Goldwing</td>
+                    <td class="track-artist">Billie Eilish</td>
+                    <td class="track-duration">2:31</td>
+                </tr>
+                <tr class="track-row">
+                    <td class="track-num">3</td>
+                    <td class="track-title">NDA</td>
+                    <td class="track-artist">Billie Eilish</td>
+                    <td class="track-duration">3:15</td>
+                </tr>
+                <tr class="track-row">
+                    <td class="track-num">4</td>
+                    <td class="track-title">My future</td>
+                    <td class="track-artist">Billie Eilish</td>
+                    <td class="track-duration">3:30</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="tabs">
+            <button class="tab active">About the Artist</button>
+            <button class="tab">Reviews</button>
+            <button class="tab">Credits</button>
+        </div>
+        <div class="tab-content">
+            <p>It is about personal growth, difficult relationships, fame, and learning to set emotional boundaries. In her songs, Billie reflects on experiences she lived through after becoming famous, talking about disappointments, toxic relationships, public pressure, and the search for peace and emotional maturity. The album shows a more reflective and honest stage of the artist, where she expresses how to learn to take care of herself and leave behind situations that were hurting her.</p>
+        </div>
+    </section>
+
+</main>  <!-- ← el main cierra AQUÍ, después de ambas columnas -->
+</body>
+</html>
